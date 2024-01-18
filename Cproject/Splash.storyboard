@@ -27,6 +27,11 @@
                             <constraint firstItem="mc3-Ul-FB4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZWK-zk-CVN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appIcon" destination="mc3-Ul-FB4" id="WI5-ki-w63"/>
+                        <outlet property="appIconCenterXConstraint" destination="ZWK-zk-CVN" id="a88-c9-Zfm"/>
+                        <outlet property="appIconCenterYConstraint" destination="SNE-Va-hqd" id="lzc-z6-3vZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
