@@ -16,21 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mc3-Ul-FB4">
-                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-os-IZc" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="SplashLottie"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mc3-Ul-FB4" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="SNE-Va-hqd"/>
-                            <constraint firstItem="mc3-Ul-FB4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZWK-zk-CVN"/>
+                            <constraint firstAttribute="trailing" secondItem="jQ4-os-IZc" secondAttribute="trailing" id="UUX-Cf-C6U"/>
+                            <constraint firstItem="jQ4-os-IZc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="YUK-Ya-0lc"/>
+                            <constraint firstAttribute="bottom" secondItem="jQ4-os-IZc" secondAttribute="bottom" id="lEX-I9-0pD"/>
+                            <constraint firstItem="jQ4-os-IZc" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="t5S-ie-g6p"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="appIcon" destination="mc3-Ul-FB4" id="WI5-ki-w63"/>
-                        <outlet property="appIconCenterXConstraint" destination="ZWK-zk-CVN" id="a88-c9-Zfm"/>
-                        <outlet property="appIconCenterYConstraint" destination="SNE-Va-hqd" id="lzc-z6-3vZ"/>
+                        <outlet property="lottieAnimationView" destination="jQ4-os-IZc" id="6Lh-gL-fPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,7 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app-icon" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
