@@ -12,10 +12,11 @@
 		AD19D6AA2B5BADC8007DAF6C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD19D6A92B5BADC8007DAF6C /* Colors.xcassets */; };
 		AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6AB2B5BAF78007DAF6C /* CPColor.swift */; };
 		AD19D6AE2B5BB03A007DAF6C /* CPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6AD2B5BB03A007DAF6C /* CPFont.swift */; };
+		AD19D6B22B5BBABD007DAF6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6B12B5BBABD007DAF6C /* HomeViewController.swift */; };
+		AD19D6B42B5BC296007DAF6C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD19D6B32B5BC296007DAF6C /* Home.storyboard */; };
+		AD19D6BA2B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */; };
 		AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA412B57E783007C0C96 /* AppDelegate.swift */; };
 		AD31FA442B57E783007C0C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA432B57E783007C0C96 /* SceneDelegate.swift */; };
-		AD31FA462B57E783007C0C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA452B57E783007C0C96 /* ViewController.swift */; };
-		AD31FA492B57E783007C0C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA472B57E783007C0C96 /* Main.storyboard */; };
 		AD31FA4B2B57E790007C0C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA4A2B57E790007C0C96 /* Assets.xcassets */; };
 		AD31FA4E2B57E790007C0C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA4C2B57E790007C0C96 /* LaunchScreen.storyboard */; };
 		AD31FA562B57F53B007C0C96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA552B57F53B007C0C96 /* Splash.storyboard */; };
@@ -29,11 +30,12 @@
 		AD19D6A92B5BADC8007DAF6C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AD19D6AB2B5BAF78007DAF6C /* CPColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPColor.swift; sourceTree = "<group>"; };
 		AD19D6AD2B5BB03A007DAF6C /* CPFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFont.swift; sourceTree = "<group>"; };
+		AD19D6B12B5BBABD007DAF6C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AD19D6B32B5BC296007DAF6C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD31FA3E2B57E783007C0C96 /* Cproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31FA412B57E783007C0C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD31FA432B57E783007C0C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD31FA452B57E783007C0C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD31FA482B57E783007C0C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD31FA4A2B57E790007C0C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD31FA4D2B57E790007C0C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD31FA4F2B57E790007C0C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		AD19D6A42B5BA536007DAF6C /* DesignSource */ = {
 			isa = PBXGroup;
 			children = (
+				AD31FA4A2B57E790007C0C96 /* Assets.xcassets */,
 				AD19D6A52B5BA564007DAF6C /* Images.xcassets */,
 				AD19D6A72B5BA88C007DAF6C /* CPImage.swift */,
 				AD19D6A92B5BADC8007DAF6C /* Colors.xcassets */,
@@ -63,6 +66,44 @@
 				AD19D6AD2B5BB03A007DAF6C /* CPFont.swift */,
 			);
 			path = DesignSource;
+			sourceTree = "<group>";
+		};
+		AD19D6B52B5BC474007DAF6C /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AD19D6B62B5BC490007DAF6C /* Splash */,
+				AD19D6B72B5BC4B0007DAF6C /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		AD19D6B62B5BC490007DAF6C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				AD31FA4C2B57E790007C0C96 /* LaunchScreen.storyboard */,
+				AD31FA552B57F53B007C0C96 /* Splash.storyboard */,
+				AD31FA572B57F56A007C0C96 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		AD19D6B72B5BC4B0007DAF6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AD19D6B32B5BC296007DAF6C /* Home.storyboard */,
+				AD19D6B12B5BBABD007DAF6C /* HomeViewController.swift */,
+				AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AD19D6B82B5BC4C1007DAF6C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AD31FA412B57E783007C0C96 /* AppDelegate.swift */,
+				AD31FA432B57E783007C0C96 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		AD31FA352B57E783007C0C96 = {
@@ -84,16 +125,10 @@
 		AD31FA402B57E783007C0C96 /* Cproject */ = {
 			isa = PBXGroup;
 			children = (
+				AD19D6B82B5BC4C1007DAF6C /* Delegates */,
 				AD19D6A42B5BA536007DAF6C /* DesignSource */,
-				AD31FA412B57E783007C0C96 /* AppDelegate.swift */,
-				AD31FA432B57E783007C0C96 /* SceneDelegate.swift */,
-				AD31FA452B57E783007C0C96 /* ViewController.swift */,
-				AD31FA472B57E783007C0C96 /* Main.storyboard */,
-				AD31FA4A2B57E790007C0C96 /* Assets.xcassets */,
-				AD31FA4C2B57E790007C0C96 /* LaunchScreen.storyboard */,
+				AD19D6B52B5BC474007DAF6C /* Feature */,
 				AD31FA4F2B57E790007C0C96 /* Info.plist */,
-				AD31FA552B57F53B007C0C96 /* Splash.storyboard */,
-				AD31FA572B57F56A007C0C96 /* SplashViewController.swift */,
 			);
 			path = Cproject;
 			sourceTree = "<group>";
@@ -165,8 +200,8 @@
 				AD31FA4E2B57E790007C0C96 /* LaunchScreen.storyboard in Resources */,
 				AD19D6A62B5BA564007DAF6C /* Images.xcassets in Resources */,
 				AD31FA4B2B57E790007C0C96 /* Assets.xcassets in Resources */,
+				AD19D6B42B5BC296007DAF6C /* Home.storyboard in Resources */,
 				AD19D6AA2B5BADC8007DAF6C /* Colors.xcassets in Resources */,
-				AD31FA492B57E783007C0C96 /* Main.storyboard in Resources */,
 				AD31FA562B57F53B007C0C96 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,26 +214,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */,
-				AD31FA462B57E783007C0C96 /* ViewController.swift in Sources */,
 				AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */,
+				AD19D6B22B5BBABD007DAF6C /* HomeViewController.swift in Sources */,
 				AD19D6AE2B5BB03A007DAF6C /* CPFont.swift in Sources */,
 				AD19D6A82B5BA88C007DAF6C /* CPImage.swift in Sources */,
 				AD31FA442B57E783007C0C96 /* SceneDelegate.swift in Sources */,
 				AD31FA582B57F56A007C0C96 /* SplashViewController.swift in Sources */,
+				AD19D6BA2B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD31FA472B57E783007C0C96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD31FA482B57E783007C0C96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD31FA4C2B57E790007C0C96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
