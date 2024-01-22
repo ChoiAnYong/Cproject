@@ -16,6 +16,10 @@
 		AD19D6B42B5BC296007DAF6C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD19D6B32B5BC296007DAF6C /* Home.storyboard */; };
 		AD19D6BA2B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */; };
 		AD19D6BC2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */; };
+		AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6BF2B5E5337007DAF6C /* NetworkService.swift */; };
+		AD19D6C32B5E548D007DAF6C /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6C22B5E548D007DAF6C /* HomeResponse.swift */; };
+		AD19D6C62B5E5D56007DAF6C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AD19D6C52B5E5D56007DAF6C /* Kingfisher */; };
+		AD19D6C82B5E5E86007DAF6C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6C72B5E5E86007DAF6C /* HomeViewModel.swift */; };
 		AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA412B57E783007C0C96 /* AppDelegate.swift */; };
 		AD31FA442B57E783007C0C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA432B57E783007C0C96 /* SceneDelegate.swift */; };
 		AD31FA4B2B57E790007C0C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA4A2B57E790007C0C96 /* Assets.xcassets */; };
@@ -35,6 +39,9 @@
 		AD19D6B32B5BC296007DAF6C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD19D6BF2B5E5337007DAF6C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AD19D6C22B5E548D007DAF6C /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		AD19D6C72B5E5E86007DAF6C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AD31FA3E2B57E783007C0C96 /* Cproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31FA412B57E783007C0C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD31FA432B57E783007C0C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD19D6C62B5E5D56007DAF6C /* Kingfisher in Frameworks */,
 				AD31FA5B2B590E22007C0C96 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,10 +100,10 @@
 		AD19D6B72B5BC4B0007DAF6C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AD19D6BD2B5E4A58007DAF6C /* View */,
 				AD19D6B32B5BC296007DAF6C /* Home.storyboard */,
 				AD19D6B12B5BBABD007DAF6C /* HomeViewController.swift */,
-				AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */,
-				AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */,
+				AD19D6C72B5E5E86007DAF6C /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -107,6 +115,31 @@
 				AD31FA432B57E783007C0C96 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AD19D6BD2B5E4A58007DAF6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */,
+				AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD19D6BE2B5E531A007DAF6C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD19D6BF2B5E5337007DAF6C /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AD19D6C12B5E546A007DAF6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD19D6C22B5E548D007DAF6C /* HomeResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AD31FA352B57E783007C0C96 = {
@@ -130,6 +163,8 @@
 			children = (
 				AD19D6B82B5BC4C1007DAF6C /* Delegates */,
 				AD19D6A42B5BA536007DAF6C /* DesignSource */,
+				AD19D6BE2B5E531A007DAF6C /* Network */,
+				AD19D6C12B5E546A007DAF6C /* Model */,
 				AD19D6B52B5BC474007DAF6C /* Feature */,
 				AD31FA4F2B57E790007C0C96 /* Info.plist */,
 			);
@@ -154,6 +189,7 @@
 			name = Cproject;
 			packageProductDependencies = (
 				AD31FA5A2B590E22007C0C96 /* Lottie */,
+				AD19D6C52B5E5D56007DAF6C /* Kingfisher */,
 			);
 			productName = Cproject;
 			productReference = AD31FA3E2B57E783007C0C96 /* Cproject.app */;
@@ -185,6 +221,7 @@
 			mainGroup = AD31FA352B57E783007C0C96;
 			packageReferences = (
 				AD31FA592B590E22007C0C96 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				AD19D6C42B5E5D56007DAF6C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AD31FA3F2B57E783007C0C96 /* Products */;
 			projectDirPath = "";
@@ -216,15 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */,
 				AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */,
 				AD19D6BC2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift in Sources */,
 				AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */,
 				AD19D6B22B5BBABD007DAF6C /* HomeViewController.swift in Sources */,
 				AD19D6AE2B5BB03A007DAF6C /* CPFont.swift in Sources */,
 				AD19D6A82B5BA88C007DAF6C /* CPImage.swift in Sources */,
+				AD19D6C82B5E5E86007DAF6C /* HomeViewModel.swift in Sources */,
 				AD31FA442B57E783007C0C96 /* SceneDelegate.swift in Sources */,
 				AD31FA582B57F56A007C0C96 /* SplashViewController.swift in Sources */,
 				AD19D6BA2B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift in Sources */,
+				AD19D6C32B5E548D007DAF6C /* HomeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +479,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AD19D6C42B5E5D56007DAF6C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 		AD31FA592B590E22007C0C96 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -450,6 +498,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD19D6C52B5E5D56007DAF6C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD19D6C42B5E5D56007DAF6C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		AD31FA5A2B590E22007C0C96 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AD31FA592B590E22007C0C96 /* XCRemoteSwiftPackageReference "lottie-ios" */;
