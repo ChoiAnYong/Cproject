@@ -21,6 +21,7 @@
 		AD19D6C62B5E5D56007DAF6C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AD19D6C52B5E5D56007DAF6C /* Kingfisher */; };
 		AD19D6C82B5E5E86007DAF6C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6C72B5E5E86007DAF6C /* HomeViewModel.swift */; };
 		AD19D6CB2B5E8252007DAF6C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6CA2B5E8252007DAF6C /* Numeric+Extensions.swift */; };
+		AD19D6CD2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19D6CC2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift */; };
 		AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA412B57E783007C0C96 /* AppDelegate.swift */; };
 		AD31FA442B57E783007C0C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA432B57E783007C0C96 /* SceneDelegate.swift */; };
 		AD31FA4B2B57E790007C0C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA4A2B57E790007C0C96 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		AD31FA562B57F53B007C0C96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31FA552B57F53B007C0C96 /* Splash.storyboard */; };
 		AD31FA582B57F56A007C0C96 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA572B57F56A007C0C96 /* SplashViewController.swift */; };
 		AD31FA5B2B590E22007C0C96 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD31FA5A2B590E22007C0C96 /* Lottie */; };
+		AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		AD19D6C22B5E548D007DAF6C /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		AD19D6C72B5E5E86007DAF6C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AD19D6CA2B5E8252007DAF6C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
+		AD19D6CC2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCouponButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD31FA3E2B57E783007C0C96 /* Cproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31FA412B57E783007C0C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD31FA432B57E783007C0C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		AD31FA4F2B57E790007C0C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD31FA552B57F53B007C0C96 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		AD31FA572B57F56A007C0C96 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 			children = (
 				AD19D6B92B5BC794007DAF6C /* HomeBannerCollectionViewCell.swift */,
 				AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */,
+				AD19D6CC2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift */,
+				AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,11 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */,
 				AD19D6CB2B5E8252007DAF6C /* Numeric+Extensions.swift in Sources */,
 				AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */,
 				AD19D6BC2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift in Sources */,
 				AD31FA422B57E783007C0C96 /* AppDelegate.swift in Sources */,
+				AD19D6CD2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift in Sources */,
 				AD19D6B22B5BBABD007DAF6C /* HomeViewController.swift in Sources */,
 				AD19D6AE2B5BB03A007DAF6C /* CPFont.swift in Sources */,
 				AD19D6A82B5BA88C007DAF6C /* CPImage.swift in Sources */,
