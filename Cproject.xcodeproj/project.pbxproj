@@ -30,6 +30,7 @@
 		AD31FA582B57F56A007C0C96 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31FA572B57F56A007C0C96 /* SplashViewController.swift */; };
 		AD31FA5B2B590E22007C0C96 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD31FA5A2B590E22007C0C96 /* Lottie */; };
 		AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */; };
+		AD49EED12B5FCFC00064FA5D /* HomeThemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EED02B5FCFC00064FA5D /* HomeThemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		AD31FA552B57F53B007C0C96 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		AD31FA572B57F56A007C0C96 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD49EED02B5FCFC00064FA5D /* HomeThemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				AD19D6BB2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift */,
 				AD19D6CC2B5E94EF007DAF6C /* HomeCouponButtonCollectionViewCell.swift */,
 				AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */,
+				AD49EED02B5FCFC00064FA5D /* HomeThemCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */,
+				AD49EED12B5FCFC00064FA5D /* HomeThemCollectionViewCell.swift in Sources */,
 				AD19D6CB2B5E8252007DAF6C /* Numeric+Extensions.swift in Sources */,
 				AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */,
 				AD19D6BC2B5D36BC007DAF6C /* HomeProductCollectionViewCell.swift in Sources */,

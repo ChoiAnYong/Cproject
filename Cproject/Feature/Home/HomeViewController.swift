@@ -19,6 +19,7 @@ final class HomeViewController: UIViewController {
         case couponButton
         case verticalProductItem
         case separateLine2
+        case theme
     }
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -54,6 +55,8 @@ final class HomeViewController: UIViewController {
                 return HomeCouponButtonCollectionViewCell.couponButtonItemLayout()
             case .separateLine1, .separateLine2:
                 return HomeSeparateLineCollectionViewCell.separateLineLayout()
+            case .theme:
+                return HomeThemCollectionViewCell.themeLayout()
             case .none: return nil
             }
         }
@@ -82,6 +85,8 @@ final class HomeViewController: UIViewController {
                 return self?.couponButtonCell(collectionView, indexPath, viewModel)
             case .separateLine1, .separateLine2:
                 return self?.separateLineCell(collectionView, indexPath, viewModel)
+            case .theme:
+                return self?.themeCell(collectionView, indexPath, viewModel)
             case .none:
                 return .init()
             }
@@ -113,6 +118,12 @@ final class HomeViewController: UIViewController {
             snapShot.appendSections([.verticalProductItem])
             snapShot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
         }
+        
+        if let themeViewModels = viewModel.state.collectionViewModels.themeViewModels {
+            snapShot.appendSections([.theme])
+            snapShot.appendItems(themeViewModels, toSection: .theme)
+        }
+        
         dataSource.apply(snapShot)
     }
     
@@ -140,6 +151,13 @@ final class HomeViewController: UIViewController {
     private func separateLineCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
         guard let viewModel = viewModel as? HomeSeparateLineCollectionViewCellViewModel,
               let cell: HomeSeparateLineCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSeparateLineCollectionViewCell.reusableId, for: indexPath) as? HomeSeparateLineCollectionViewCell else { return .init()}
+        cell.setViewModel(viewModel)
+        return cell
+    }
+    
+    private func themeCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
+        guard let viewModel = viewModel as? HomeThemCollectionViewCellViewModel,
+              let cell: HomeThemCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeThemCollectionViewCell.reusableId, for: indexPath) as? HomeThemCollectionViewCell else { return .init()}
         cell.setViewModel(viewModel)
         return cell
     }

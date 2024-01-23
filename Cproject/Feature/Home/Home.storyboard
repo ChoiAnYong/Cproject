@@ -133,7 +133,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCouponButtonCollectionViewCell" id="pgG-yS-rI8" customClass="HomeCouponButtonCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="352" y="573.66666666666663" width="24" height="14"/>
+                                        <rect key="frame" x="369" y="573.66666666666663" width="24" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Myj-DF-Dz5">
                                             <rect key="frame" x="0.0" y="0.0" width="24" height="14"/>
@@ -157,6 +157,28 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="couponButton" destination="6Sd-ae-n48" id="lek-yS-MGM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier=" HomeThemCollectionViewCell" id="47C-HA-aoL" customClass="HomeThemCollectionViewCell" customModule="Cproject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="667.33333333333337" width="342" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T2C-XB-4vJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="153"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-cf-A35">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="153"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GJX-cf-A35" secondAttribute="bottom" id="QRQ-2X-0fC"/>
+                                                <constraint firstAttribute="trailing" secondItem="GJX-cf-A35" secondAttribute="trailing" id="Qfr-lM-2ba"/>
+                                                <constraint firstItem="GJX-cf-A35" firstAttribute="leading" secondItem="T2C-XB-4vJ" secondAttribute="leading" id="RzG-5A-xio"/>
+                                                <constraint firstItem="GJX-cf-A35" firstAttribute="top" secondItem="T2C-XB-4vJ" secondAttribute="top" id="iQw-Nx-EQU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="themeImageView" destination="GJX-cf-A35" id="Mwv-Gy-Y3k"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
