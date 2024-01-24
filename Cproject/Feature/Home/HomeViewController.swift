@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
     private enum Section: Int {
         case banner
         case horizontalProductItem
+        case category
         case separateLine1
         case couponButton
         case verticalProductItem
@@ -49,6 +50,8 @@ final class HomeViewController: UIViewController {
                 return HomeBannerCollectionViewCell.bannerLayout()
             case .horizontalProductItem:
                 return HomeProductCollectionViewCell.horizontalProductItemLayout()
+            case .category:
+                return HomeCategoryCollectionViewCell.categoryItemLayout()
             case .verticalProductItem:
                 return HomeProductCollectionViewCell.verticalProductItemLayout()
             case .couponButton:
@@ -81,6 +84,8 @@ final class HomeViewController: UIViewController {
                 return self?.bannerCell(collectionView, indexPath, viewModel)
             case .horizontalProductItem, .verticalProductItem:
                 return self?.productItemCell(collectionView, indexPath, viewModel)
+            case .category:
+                return self?.categoryCell(collectionView, indexPath, viewModel)
             case .couponButton:
                 return self?.couponButtonCell(collectionView, indexPath, viewModel)
             case .separateLine1, .separateLine2:
@@ -117,6 +122,11 @@ final class HomeViewController: UIViewController {
             snapShot.appendItems(viewModel.state.collectionViewModels.separateLine1ViewModels, toSection: .separateLine1)
         }
         
+        if let categoryViewModels = viewModel.state.collectionViewModels.categoryViewModels {
+            snapShot.appendSections([.category])
+            snapShot.appendItems(categoryViewModels, toSection: .category)
+        }
+        
         if let couponViewModels = viewModel.state.collectionViewModels.couponState {
             snapShot.appendSections([.couponButton])
             snapShot.appendItems(couponViewModels, toSection: .couponButton)
@@ -149,6 +159,13 @@ final class HomeViewController: UIViewController {
     private func productItemCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
         guard let viewModel = viewModel as? HomeProductCollectionViewCellViewModel,
               let cell: HomeProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeProductCollectionViewCell.reusableId, for: indexPath) as? HomeProductCollectionViewCell else { return .init()}
+        cell.setViewModel(viewModel)
+        return cell
+    }
+    
+    private func categoryCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
+        guard let viewModel = viewModel as? HomeCategoryCollectionViewCellViewModel,
+              let cell: HomeCategoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoryCollectionViewCell.reusableId, for: indexPath) as? HomeCategoryCollectionViewCell else { return .init()}
         cell.setViewModel(viewModel)
         return cell
     }

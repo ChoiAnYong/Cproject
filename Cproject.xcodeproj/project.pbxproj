@@ -32,6 +32,7 @@
 		AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */; };
 		AD49EED12B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EED02B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift */; };
 		AD49EED32B60E9400064FA5D /* HomeThemeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EED22B60E9400064FA5D /* HomeThemeHeaderCollectionReusableView.swift */; };
+		AD49EED52B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD49EED42B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeparateLineCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD49EED02B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD49EED22B60E9400064FA5D /* HomeThemeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		AD49EED42B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				AD49EECE2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift */,
 				AD49EED02B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift */,
 				AD49EED22B60E9400064FA5D /* HomeThemeHeaderCollectionReusableView.swift */,
+				AD49EED42B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD49EECF2B5EA49E0064FA5D /* HomeSeparateLineCollectionViewCell.swift in Sources */,
+				AD49EED52B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift in Sources */,
 				AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */,
 				AD49EED12B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift in Sources */,
 				AD19D6CB2B5E8252007DAF6C /* Numeric+Extensions.swift in Sources */,

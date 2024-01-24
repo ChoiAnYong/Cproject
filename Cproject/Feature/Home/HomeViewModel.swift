@@ -6,6 +6,7 @@
 //
 import Combine
 import Foundation
+import UIKit
 
 final class HomeViewModel {
     enum Action {
@@ -21,6 +22,16 @@ final class HomeViewModel {
         struct CollectionViewModels{
             var bannerViewModels: [HomeBannerCollectionViewCellViewModel]?
             var horizontalProductViewModels: [HomeProductCollectionViewCellViewModel]?
+            var categoryViewModels: [HomeCategoryCollectionViewCellViewModel]? = [
+                    .init(image: UIImage(resource: .category1Big), title: "쇼핑"),
+                    .init(image: UIImage(resource: .category2Big), title: "식품"),
+                    .init(image: UIImage(resource: .category3Big), title: "생활용품"),
+                    .init(image: UIImage(resource: .category4Big), title: "가전디지털"),
+                    .init(image: UIImage(resource: .category5Big), title: "스포츠"),
+                    .init(image: UIImage(resource: .category6Big), title: "애완용품"),
+                    .init(image: UIImage(resource: .category7Big), title: "파티용품"),
+                    .init(image: UIImage(resource: .category8Big), title: "가구")
+            ]
             var verticalProductViewModels: [HomeProductCollectionViewCellViewModel]?
             var couponState: [HomeCouponButtonCollectionViewCellViewModel]?
             var separateLine1ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
