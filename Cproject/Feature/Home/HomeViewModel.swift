@@ -23,7 +23,7 @@ final class HomeViewModel {
             var bannerViewModels: [HomeBannerCollectionViewCellViewModel]?
             var horizontalProductViewModels: [HomeProductCollectionViewCellViewModel]?
             var categoryViewModels: [HomeCategoryCollectionViewCellViewModel]? = [
-                    .init(image: UIImage(resource: .category1Big), title: "쇼핑"),
+                    .init(image: UIImage(resource: .category1Big), title: "패션"),
                     .init(image: UIImage(resource: .category2Big), title: "식품"),
                     .init(image: UIImage(resource: .category3Big), title: "생활용품"),
                     .init(image: UIImage(resource: .category4Big), title: "가전디지털"),
