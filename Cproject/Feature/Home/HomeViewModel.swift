@@ -25,7 +25,7 @@ final class HomeViewModel {
             var couponState: [HomeCouponButtonCollectionViewCellViewModel]?
             var separateLine1ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
             var separateLine2ViewModels: [HomeSeparateLineCollectionViewCellViewModel] = [HomeSeparateLineCollectionViewCellViewModel()]
-            var themeViewModels: [HomeThemCollectionViewCellViewModel]?
+            var themeViewModels: ( headerViewModel: HomeThemeHeaderCollectionReusableViewModel, items: [HomeThemeCollectionViewCellViewModel])?
         }
         @Published var collectionViewModels: CollectionViewModels = CollectionViewModels()
     }
@@ -99,9 +99,10 @@ extension HomeViewModel {
 
     @MainActor
     private func transformTheme(_ response: HomeResponse) async {
-        state.collectionViewModels.themeViewModels = response.themes.map {
-            HomeThemCollectionViewCellViewModel(themImageUrl: $0.imageUrl)
+        let items = response.themes.map {
+            HomeThemeCollectionViewCellViewModel(themImageUrl: $0.imageUrl)
         }
+        state.collectionViewModels.themeViewModels = (HomeThemeHeaderCollectionReusableViewModel(headerText: "테마관"), items)
     }
     
     private func productToHomeProductCollectionViewCellViewModel(_ product: [Product]) -> [HomeProductCollectionViewCellViewModel] {

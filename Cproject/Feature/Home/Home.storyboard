@@ -23,13 +23,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YpM-q7-0dO">
                                     <size key="itemSize" width="342" height="153"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="194"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeBannerCollectionViewCell" id="ezB-Pe-66Z" customClass="HomeBannerCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="25.666666666666668" y="0.0" width="342" height="153"/>
+                                        <rect key="frame" x="25.666666666666668" y="194" width="342" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1uc-QT-r6o">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="153"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeProductCollectionViewCell" id="S8e-kQ-3QP" customClass="HomeProductCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="76.666666666666671" y="163" width="240" height="331.33333333333326"/>
+                                        <rect key="frame" x="76.666666666666671" y="357" width="240" height="331.33333333333326"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OwK-Hz-fGx">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="331.33333333333326"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeSeparateLineCollectionViewCell" id="vUe-sl-RiI" customClass="HomeSeparateLineCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="504.33333333333331" width="342" height="153"/>
+                                        <rect key="frame" x="0.0" y="698.33333333333337" width="342" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iDo-ay-bGb">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="153"/>
@@ -133,7 +133,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCouponButtonCollectionViewCell" id="pgG-yS-rI8" customClass="HomeCouponButtonCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="369" y="573.66666666666663" width="24" height="14"/>
+                                        <rect key="frame" x="369" y="768" width="24" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Myj-DF-Dz5">
                                             <rect key="frame" x="0.0" y="0.0" width="24" height="14"/>
@@ -159,8 +159,8 @@
                                             <outlet property="couponButton" destination="6Sd-ae-n48" id="lek-yS-MGM"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier=" HomeThemCollectionViewCell" id="47C-HA-aoL" customClass="HomeThemCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="667.33333333333337" width="342" height="153"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeThemeCollectionViewCell" id="47C-HA-aoL" customClass="HomeThemeCollectionViewCell" customModule="Cproject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="861.33333333333337" width="342" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T2C-XB-4vJ">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="153"/>
@@ -182,6 +182,27 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeThemeHeaderCollectionReusableView" id="dLF-1N-Zmn" customClass="HomeThemeHeaderCollectionReusableView" customModule="Cproject" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="194"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAu-L0-pOm">
+                                            <rect key="frame" x="30" y="23" width="333" height="171"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" name="bk"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iAu-L0-pOm" firstAttribute="top" secondItem="dLF-1N-Zmn" secondAttribute="top" constant="23" id="5nH-Zi-Kdy"/>
+                                        <constraint firstAttribute="trailing" secondItem="iAu-L0-pOm" secondAttribute="trailing" constant="30" id="60d-xy-Sy6"/>
+                                        <constraint firstItem="iAu-L0-pOm" firstAttribute="leading" secondItem="dLF-1N-Zmn" secondAttribute="leading" constant="30" id="Sjb-g6-BWD"/>
+                                        <constraint firstAttribute="bottom" secondItem="iAu-L0-pOm" secondAttribute="bottom" id="XJL-2G-oe0"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="themeHeaderLabel" destination="iAu-L0-pOm" id="MAq-SO-e8E"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
