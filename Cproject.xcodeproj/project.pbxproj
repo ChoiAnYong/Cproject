@@ -51,6 +51,9 @@
 		AD9FBF9E2B626401002784AA /* DetailPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FBF9D2B626401002784AA /* DetailPurchaseView.swift */; };
 		AD9FBFA02B627250002784AA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9FBF9F2B627250002784AA /* Detail.storyboard */; };
 		AD9FBFA22B627272002784AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FBFA12B627272002784AA /* DetailViewController.swift */; };
+		AD9FBFA52B627A61002784AA /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FBFA42B627A61002784AA /* OptionViewController.swift */; };
+		AD9FBFA72B627A6C002784AA /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FBFA62B627A6C002784AA /* OptionViewModel.swift */; };
+		AD9FBFA92B627A7D002784AA /* OptionRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FBFA82B627A7D002784AA /* OptionRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		AD9FBF9D2B626401002784AA /* DetailPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPurchaseView.swift; sourceTree = "<group>"; };
 		AD9FBF9F2B627250002784AA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		AD9FBFA12B627272002784AA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AD9FBFA42B627A61002784AA /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		AD9FBFA62B627A6C002784AA /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
+		AD9FBFA82B627A7D002784AA /* OptionRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +135,10 @@
 		AD19D6B52B5BC474007DAF6C /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				AD9FBF8B2B624AA2002784AA /* Detail */,
 				AD19D6B62B5BC490007DAF6C /* Splash */,
 				AD19D6B72B5BC4B0007DAF6C /* Home */,
+				AD9FBF8B2B624AA2002784AA /* Detail */,
+				AD9FBFA32B627A39002784AA /* Option */,
 				AD49EED62B6154750064FA5D /* Favorite */,
 			);
 			path = Feature;
@@ -283,6 +290,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD9FBFA32B627A39002784AA /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				AD9FBFA42B627A61002784AA /* OptionViewController.swift */,
+				AD9FBFA62B627A6C002784AA /* OptionViewModel.swift */,
+				AD9FBFA82B627A7D002784AA /* OptionRootView.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,12 +389,15 @@
 				AD49EED52B60FF730064FA5D /* HomeCategoryCollectionViewCell.swift in Sources */,
 				AD19D6C02B5E5337007DAF6C /* NetworkService.swift in Sources */,
 				AD49EED12B5FCFC00064FA5D /* HomeThemeCollectionViewCell.swift in Sources */,
+				AD9FBFA72B627A6C002784AA /* OptionViewModel.swift in Sources */,
 				AD49EEE52B615D180064FA5D /* FavoriteItemTableViewCell.swift in Sources */,
 				AD49EEE32B615B660064FA5D /* PurchaseButton.swift in Sources */,
 				AD19D6CB2B5E8252007DAF6C /* Numeric+Extensions.swift in Sources */,
 				AD9FBF9E2B626401002784AA /* DetailPurchaseView.swift in Sources */,
+				AD9FBFA92B627A7D002784AA /* OptionRootView.swift in Sources */,
 				AD49EEE02B6157C60064FA5D /* Product.swift in Sources */,
 				AD19D6AC2B5BAF78007DAF6C /* CPColor.swift in Sources */,
+				AD9FBFA52B627A61002784AA /* OptionViewController.swift in Sources */,
 				AD9FBF922B624C7D002784AA /* ProductDetailResponse.swift in Sources */,
 				AD9FBF902B624B07002784AA /* DetailViewModel.swift in Sources */,
 				AD49EED32B60E9400064FA5D /* HomeThemeHeaderCollectionReusableView.swift in Sources */,

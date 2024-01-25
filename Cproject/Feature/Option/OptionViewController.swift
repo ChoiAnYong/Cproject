@@ -1,24 +1,21 @@
 //
-//  DetailViewController.swift
+//  OptionViewController.swift
 //  Cproject
 //
 //  Created by 최안용 on 1/25/24.
 //
 
-import Combine
 import UIKit
 import SwiftUI
 
-final class DetailViewController: UIViewController {
-    let viewModel: DetailViewModel = DetailViewModel()
-    lazy var rootView: UIHostingController = UIHostingController(rootView: DetailRootView(viewModel: viewModel))
-    private var cancellables: Set<AnyCancellable> = []
+final class OptionViewController: UIViewController {
+    let viewModel: OptionViewModel = OptionViewModel()
+    lazy var rootView: UIHostingController = UIHostingController(rootView: OptionRootView(viewModel: viewModel))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addRootView()
-        bindViewModelAction()
     }
     
     private func addRootView() {
@@ -32,15 +29,5 @@ final class DetailViewController: UIViewController {
             rootView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             rootView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-    }
-    
-    private func bindViewModelAction() {
-        viewModel.showOptionViewController
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                let viewController = OptionViewController()
-                self?.navigationController?.pushViewController(viewController, animated: true)
-            }
-            .store(in: &cancellables)
     }
 }
