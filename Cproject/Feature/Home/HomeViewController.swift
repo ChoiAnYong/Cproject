@@ -38,7 +38,7 @@ final class HomeViewController: UIViewController {
         
         bindingViewModel()
         collectionView.collectionViewLayout = compositionalLayout
-        
+        collectionView.delegate = self
         viewModel.process(action: .loadData)
         viewModel.process(action: .loadCoupon)
     }
@@ -130,7 +130,7 @@ final class HomeViewController: UIViewController {
         if let couponViewModels = viewModel.state.collectionViewModels.couponState {
             snapShot.appendSections([.couponButton])
             snapShot.appendItems(couponViewModels, toSection: .couponButton)
-
+            
         }
         
         if let verticalProductViewModels = viewModel.state.collectionViewModels.verticalProductViewModels {
@@ -196,6 +196,27 @@ final class HomeViewController: UIViewController {
         let favoriteStoryboard: UIStoryboard = UIStoryboard(name: "Favorite", bundle: nil)
         if let favoriteViewController = favoriteStoryboard.instantiateInitialViewController() {
             navigationController?.pushViewController(favoriteViewController, animated: true)
+        }
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch currentSection[indexPath.section] {
+        case .banner:
+            break
+        case .separateLine1, .separateLine2:
+            break
+        case .couponButton:
+            break
+        case .horizontalProductItem, .verticalProductItem:
+            let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+            guard let viewController: UIViewController = storyboard.instantiateInitialViewController() else { return }
+            navigationController?.pushViewController(viewController, animated: true)
+        case .theme:
+            break
+        case .category:
+            break
         }
     }
 }

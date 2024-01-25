@@ -14,7 +14,7 @@ struct HomeSeparateLineCollectionViewCellViewModel: Hashable {
 final class HomeSeparateLineCollectionViewCell: UICollectionViewCell {
     static let reusableId: String = "HomeSeparateLineCollectionViewCell"
     func setViewModel(_ viewModel: HomeSeparateLineCollectionViewCellViewModel) {
-        contentView.backgroundColor = CPColor.gray1
+        contentView.backgroundColor = CPColor.UIKit.gray1
     }
 }
 
