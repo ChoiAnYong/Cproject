@@ -13,13 +13,22 @@ struct PurchaseSelectedItemViewModel {
 }
 
 final class PurchaseSelectedItemView: UIView {
+    private var containerStackView: UIStackView = {
+        let stackView: UIStackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.spacing = 0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     private var contentStackView: UIStackView = {
         let stackView: UIStackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.spacing = 10
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -27,6 +36,7 @@ final class PurchaseSelectedItemView: UIView {
         let label: UILabel = UILabel()
         label.font = CPFont.UIKit.r12
         label.textColor = CPColor.UIKit.bk
+        label.numberOfLines = 0
         return label
     }()
     
@@ -37,8 +47,14 @@ final class PurchaseSelectedItemView: UIView {
         return label
     }()
     
+    private var spacer: UIView = {
+        let view: UIView = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
+    
     var viewModel: PurchaseSelectedItemViewModel
-    private var contentStackViewConstraints: [NSLayoutConstraint]?
+    private var containerStackViewConstraints: [NSLayoutConstraint]?
     
     init(viewModel: PurchaseSelectedItemViewModel) {
         self.viewModel = viewModel
@@ -52,21 +68,23 @@ final class PurchaseSelectedItemView: UIView {
     }
     
     override func updateConstraints() {
-        if contentStackViewConstraints == nil {
+        if containerStackViewConstraints == nil {
             let constraints = [
-                contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-                contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-                contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-                contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+                containerStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+                containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+                containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+                containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
             ]
             NSLayoutConstraint.activate(constraints)
-            contentStackViewConstraints = constraints
+            containerStackViewConstraints = constraints
         }
         super.updateConstraints()
     }
     
     private func commonInit() {
-        addSubview(contentStackView)
+        addSubview(containerStackView)
+        containerStackView.addArrangedSubview(contentStackView)
+        containerStackView.addArrangedSubview(spacer)
         contentStackView.addArrangedSubview(titleLabel)
         contentStackView.addArrangedSubview(descriptionLabel)
         setBorder()
@@ -82,4 +100,8 @@ final class PurchaseSelectedItemView: UIView {
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
     }
+}
+
+#Preview {
+    PurchaseSelectedItemView(viewModel: PurchaseSelectedItemViewModel(title: "hi", description: "bye"))
 }

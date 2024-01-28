@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 final class PurchaseViewController: UIViewController {
+    private var cancellables: Set<AnyCancellable> = []
     private var viewModel: PurchaseViewModel = PurchaseViewModel()
     private var scrollViewConstraints: [NSLayoutConstraint]?
     private var titleLabelConstraints: [NSLayoutConstraint]?
     private var purchaseItemStackViewConstraints: [NSLayoutConstraint]?
+    private var purchaseButtonConstraints: [NSLayoutConstraint]?
     
     
     private var scrollView: UIScrollView = {
@@ -46,10 +49,24 @@ final class PurchaseViewController: UIViewController {
         return stackView
     }()
     
+    private var purchaseButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.setTitle("결제하기", for: .normal)
+        button.setTitleColor(CPColor.UIKit.wh, for: .normal)
+        button.titleLabel?.font = CPFont.UIKit.m16
+        button.layer.backgroundColor = CPColor.UIKit.keyColorBlue.cgColor
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .systemBackground
         addSubViews()
+        bindViewModel()
+        viewModel.process(.loadData)
     }
     
     override func updateViewConstraints() {
@@ -58,12 +75,13 @@ final class PurchaseViewController: UIViewController {
                 scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                 scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
                 scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-                scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                scrollView.bottomAnchor.constraint(equalTo: purchaseButton.topAnchor),
                 
                 containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
                 containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-                containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+                containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
             ]
             NSLayoutConstraint.activate(constraints)
             scrollViewConstraints = constraints
@@ -90,6 +108,17 @@ final class PurchaseViewController: UIViewController {
             titleLabelConstraints = constraints
         }
         
+        if purchaseButtonConstraints == nil {
+            let constraints = [
+                purchaseButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                purchaseButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                purchaseButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
+                purchaseButton.heightAnchor.constraint(equalToConstant: 50)
+            ]
+            NSLayoutConstraint.activate(constraints)
+            purchaseButtonConstraints = constraints
+        }
+        
         super.updateViewConstraints()
     }
     
@@ -98,7 +127,22 @@ final class PurchaseViewController: UIViewController {
         scrollView.addSubview(containerView)
         containerView.addSubview(titlelabel)
         containerView.addSubview(purchaseItemStackView)
-        purchaseItemStackView
+        view.addSubview(purchaseButton)
+    }
+    
+    private func bindViewModel() {
+        viewModel.$state
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.purchaseItemStackView.arrangedSubviews.forEach {
+                    $0.removeFromSuperview()
+                }
+                 
+                self?.viewModel.state.purchaseItems?.forEach {
+                    self?.purchaseItemStackView.addArrangedSubview(PurchaseSelectedItemView(viewModel: $0))
+                }
+            }
+            .store(in: &cancellables)
     }
 }
 
